@@ -7,14 +7,14 @@ window = turtle.Screen()
 window.setup(800, 600)
 window.bgcolor("black")
 
-r_kol = joystick_class.Paddle((370, 0))
-l_kol = joystick_class.Paddle((-370, 0))
+r_paddle = joystick_class.Paddle((370, 0))
+l_paddle = joystick_class.Paddle((-370, 0))
 
 window.listen()
-window.onkey(r_kol.go_up, "Up")
-window.onkey(r_kol.go_down, "Down")
-window.onkey(l_kol.go_up, "w")
-window.onkey(l_kol.go_down, "s")
+window.onkey(r_paddle.go_up, "Up")
+window.onkey(r_paddle.go_down, "Down")
+window.onkey(l_paddle.go_up, "w")
+window.onkey(l_paddle.go_down, "s")
 
 ball = ball_class.Ball()
 
