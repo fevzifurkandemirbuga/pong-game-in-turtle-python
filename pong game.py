@@ -25,7 +25,7 @@ collision = 0
 while True:
     ball.forward(10)
 
-    # collision paddle
+ #******************* collision paddle********************
     if ball.xcor() >= 350 and ball.distance(r_kol) <= 50:
         collision += 1
         ball.speed(0)
@@ -53,7 +53,7 @@ while True:
             ball.setheading(angle + 270)
         ball.speed(1 + (collision * 0.2))
 
-    # bounce off the wall
+#******************bounce off the wall********************
     if ball.ycor() >= 280:
         ball.speed(0)
         if 180 > ball.heading() > 90:
@@ -78,7 +78,7 @@ while True:
             ball.setheading(angle)
         ball.speed(1 + (collision * 0.2))
 
-    # get score
+#********************** get score*********************************
     if abs(ball.xcor()) > 400:
         if ball.xcor() > 0:
             l_score += 1
